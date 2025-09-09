@@ -14,9 +14,6 @@ db = client["INCIOS_DMS"]
 alerts_collection = db["coastline_alerts"]
 past90days_collection = db["past90days_alerts"]
 
-# -------------------
-# Fetch Functions
-# -------------------
 def fetch_coastline_alerts():
     final_alerts = []
     try:
