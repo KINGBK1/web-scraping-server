@@ -149,6 +149,12 @@ def get_past90days_alerts(limit: int = 50):
         alert["_id"] = str(alert["_id"])
     return alerts
 
+@app.get("/ping")
+def ping():
+    print("pinged !!")
+    return {"status": "ok", "message": "FastAPI server is awake 🚀"}
+
+
 
 if __name__ == "__main__":
     uvicorn.run("scraper:app", host="0.0.0.0", port=8000, reload=True)
